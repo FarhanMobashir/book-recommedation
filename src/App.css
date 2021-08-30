@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+
+:root {
+  /* font */
+  --heading-font: "Noto Serif", serif;
+  --copy-font: "Rubik", sans-serif;
+  /* colors */
+  --black-01: #979797;
+  --black-02: #5a5a5a;
+  --black-03: #464646;
+  --black: #000000;
+  /* font-size */
+  --text-12: 12px;
+  --text-16: 16px;
+  --text-20: 20px;
+  --text-24: 24px;
+  --text-28: 28px;
+}
+
+.App {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+}
+
+.user-name {
+  font-family: "Rubik", sans-serif;
+  font-size: var(--text-20);
+  margin-top: 20px;
+}
+
+.nav-link {
+  font-family: var(--copy-font);
+  font-weight: 300;
+  font-size: var(--text-16);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 150px;
+  text-align: left;
+}
+
+.book-container {
+  display: flex;
+}
+
+.book-image {
+  width: 9rem;
+  height: 14rem;
+  box-shadow: 0px 0px 5px var(--black-02);
+}
+
+.book {
+  margin-right: 20px;
+}
+
+.book-name {
+  width: 10rem;
+  font-family: var(--copy-font);
+  color: var(--black-03);
+  margin: 4px 0px;
+  padding: 0px;
+}
+
+.author-name {
+  width: 10rem;
+  font-family: var(--copy-font);
+  color: var(--black-02);
+  margin: 0px;
+  padding: 0px;
+}
+
+.header-image {
+  width: 1080px;
+  height: 300px;
+}
+
+.topic-name {
+  font-family: var(--heading-font);
+  margin: 20px 0px;
+  align-self: flex-start;
+}
+
+.header-and-topic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  margin-right: 20px;
+}
+.side-bar {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 20%;
+}
+
+@media only screen and (max-width: 600px) {
+  .profile-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .user-name {
+    font-size: var(--text-16);
+    padding-bottom: 10px;
+  }
+  .profile-image {
+    width: 50px;
+    height: 50px;
+  }
+  .nav-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .nav-link {
+    padding: 10px 20px;
+    text-align: center;
+    margin: 0;
+    border: 1px solid var(--black-02);
+    border-radius: 20px;
+  }
+  .App {
+    flex-direction: column;
+    padding: 20px 0px;
+  }
+  .book-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 0px 20px;
+  }
+
+  .header-image {
+    width: 350px;
+    height: 100px;
+    padding-left: 20px;
+  }
+  .topic-name {
+    padding-left: 20px;
+  }
+}
